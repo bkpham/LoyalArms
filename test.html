@@ -5,7 +5,7 @@
 <title></title>
 <script>
 window.onload=function(){ with (new XMLHttpRequest()) {
-  onreadystatechange=cb; open('GET','./TargetData/products.txt',true); responseType='text';send();
+  onreadystatechange=cb; open('GET','./TargetData/products.csv',true); responseType='text';send();
 }}
 function cb(){if(this.readyState===4)document.getElementById('main')
                                              .innerHTML=tbl(this.responseText); }
