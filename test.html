@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title></title>
+<script src="jquery-csv.js"></script>
 <script>
 window.onload=function(){ with (new XMLHttpRequest()) {
   onreadystatechange=cb; open('GET','./TargetData/products.csv',true); responseType='text';send();
@@ -10,6 +11,7 @@ window.onload=function(){ with (new XMLHttpRequest()) {
 function cb(){if(this.readyState===4)document.getElementById('main')
                                              .innerHTML=tbl(this.responseText); }
 function tbl(csv){ // do whatever is necessary to create your table here ...
+ var data = $.csv.toObjects(csv):
  return csv.split('\n')
            .map(function(tr,i){return '<tr><td>'
                                      +tr.replace(/\t/g,'</td><td>')
