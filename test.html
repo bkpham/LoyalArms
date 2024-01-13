@@ -20,8 +20,12 @@ for (var i = 0; i <= data.length; i++)
     li.text = data[i]["Product Name"];
 
     var a = document.createElement("a");
-    a.innerHTML = "Subfile " + i;
+    a.innerHTML = "Subfile " + data[i]["Price"];
 
+    var i = document.createElement("img");
+    i.src = data[i]["Image"];
+
+    a.appendChild(i);
     li.appendChild(a);
     ul.appendChild(li);
 }
