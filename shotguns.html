@@ -38,10 +38,10 @@ $(document).ready (function (){
     for (var i = 0; i <= data.length; i++)
     {
         var li = document.createElement("li");  
-        li.text = data[i]["Product Name"];
+//        li.text = data[i]["Product Name"];
 
         var a = document.createElement("a");
-        a.innerHTML = "Subfile " + data[i]["Price"];
+        a.innerHTML = data[i]["Product Name"] + " " + data[i]["Price"];
 
         var image = document.createElement("img");
         image.src = data[i]["Image"];
