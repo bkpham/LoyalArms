@@ -21,7 +21,9 @@ $(document).ready (function (){
         },
         dataType: "text",
         complete: function () {
-            var data = [{"Product Name": "hi","Price": 23.1, "Image":"https://d3gxe0jmvtuxbc.cloudfront.net/images/Product/medium/110346.jpg"}];
+            var data = [{"Product Name": "hi","Price": 23.1, "Image":"https://d3gxe0jmvtuxbc.cloudfront.net/images/Product/medium/110346.jpg"},
+                       {"Product Name": "hi","Price": 23.1, "Image":"https://d3gxe0jmvtuxbc.cloudfront.net/images/Product/medium/110346.jpg"},
+                       {"Product Name": "hi","Price": 23.1, "Image":"https://d3gxe0jmvtuxbc.cloudfront.net/images/Product/medium/110346.jpg"}];
             var ul = document.createElement("ul");
             document.body.appendChild(ul);
             for (var i = 0; i <= data.length; i++)
