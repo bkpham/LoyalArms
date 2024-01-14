@@ -11,11 +11,10 @@ window.onload=function(){ with (new XMLHttpRequest()) {
 function cb(){if(this.readyState===4)document.getElementById('main')
                                              .innerHTML=tbl(this.responseText); }
 function tbl(csv){ // do whatever is necessary to create your table here ...
- $.get( "products.csv", function( CSVdata) {
+ $.get( "./TargetData/products.csv", function( CSVdata) {
     data = $.csv.toObjects(CSVdata);
     console.log(data);
- });
-var ul = document.createElement("ul");
+    var ul = document.createElement("ul");
 document.body.appendChild(ul);
 for (var i = 0; i <= data.length; i++)
 {
@@ -32,6 +31,8 @@ for (var i = 0; i <= data.length; i++)
     li.appendChild(a);
     ul.appendChild(li);
 }
+ });
+
 }
 </script>
 </head>
