@@ -11,7 +11,7 @@
 //function cb(){if(this.readyState===4)document.getElementById('main')
 //                                             .innerHTML=tbl(this.responseText); }
 $(document).ready (function (){
-    $.get( "./TargetData/products.csv", function( CSVdata) {
+    $.get( "./TargetData/products.txt", function(CSVdata) {
     data = $.csv.toObjects(CSVdata);
     console.log(data);
     var ul = document.createElement("ul");
