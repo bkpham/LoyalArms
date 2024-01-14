@@ -28,6 +28,30 @@ body, html {
 }
 </style>
 </head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="./TargetData/rifledata>
+$(document).ready (function (){
+    console.log(data);
+    var ul = document.createElement("ul");
+    document.body.appendChild(ul);
+    for (var i = 0; i <= data.length; i++)
+    {
+        var li = document.createElement("li");  
+        li.text = data[i]["Product Name"];
+
+        var a = document.createElement("a");
+        a.innerHTML = "Subfile " + data[i]["Price"];
+
+        var image = document.createElement("img");
+        image.src = data[i]["Image"];
+
+        a.appendChild(image);
+        li.appendChild(a);
+        ul.appendChild(li);
+    }
+});
+</script>
+</head>
 <body>
 <!-- Navbar -->
 <div class="w3-top">
