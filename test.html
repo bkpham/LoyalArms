@@ -11,11 +11,16 @@
 //function cb(){if(this.readyState===4)document.getElementById('main')
 //                                             .innerHTML=tbl(this.responseText); }
 $(document).ready (function (){
-    $.get( "./TargetData/products.txt", function(productdata) {
-        let dog = "meow"
-        console.log(productdata);
-        data = $.csv.toObjects(productdata);
-        console.log(data);
+    $.ajax({
+    url: "./TargetData/products.txt",
+    async: false,
+    success: function (csvd) {
+        var items = $.csv.toObjects(csvd);
+        var jsonobject = JSON.stringify(items);
+        alert(jsonobject);
+    },
+    dataType: "text",
+    complete: function () {
         var ul = document.createElement("ul");
         document.body.appendChild(ul);
         for (var i = 0; i <= data.length; i++)
@@ -32,7 +37,8 @@ $(document).ready (function (){
             a.appendChild(i);
             li.appendChild(a);
             ul.appendChild(li);
-        };
+        // call a function on complete 
+    }
     });
 });
 </script>
