@@ -1,4 +1,4 @@
-[  {
+data = '[  {
     "Product Name": "Practice 223 Remington Ammo 55 Grain Full Metal Jacket",
     "Price": "$11.50",
     "Image": "https://d3gxe0jmvtuxbc.cloudfront.net/images/Product/medium/113203.jpg"
@@ -602,4 +602,4 @@
     "Product Name": "Bellot Ammo",
     "Price": "$65.99",
     "Image": "https://d3gxe0jmvtuxbc.cloudfront.net/images/Product/medium/112799.jpg"
-  }]
+  }]'
