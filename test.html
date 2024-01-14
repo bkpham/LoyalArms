@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title></title>
-<script src="./js/jsquery-csv.js"></script>
+<script src="./js/jquery-csv.js"></script>
 <script>
 window.onload=function(){ with (new XMLHttpRequest()) {
   onreadystatechange=cb; open('GET','./TargetData/products.csv',true); responseType='text';send();
@@ -11,7 +11,10 @@ window.onload=function(){ with (new XMLHttpRequest()) {
 function cb(){if(this.readyState===4)document.getElementById('main')
                                              .innerHTML=tbl(this.responseText); }
 function tbl(csv){ // do whatever is necessary to create your table here ...
- var data = $.csv.toObjects(csv);
+ $.get( "products.csv", function( CSVdata) {
+    data = $.csv.toObjects(CSVdata);
+    console.log(data)
+ // var data = $.csv.toObjects(csv);
  var ul = document.createElement("ul");
 document.body.appendChild(ul);
 for (var i = 0; i <= data.length; i++)
