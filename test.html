@@ -11,18 +11,12 @@
 //function cb(){if(this.readyState===4)document.getElementById('main')
 //                                             .innerHTML=tbl(this.responseText); }
 $(document).ready (function (){
-    $.ajax({
-        url: "./TargetData/products.txt",
-        async: false,
-        success: function (csvd) {
-//            var items = $.csv.toObjects(csvd);
- //           var jsonobject = JSON.stringify(items);
-  //          alert(jsonobject);
-        },
-        dataType: "text",
-        complete: function () {
-            import data from './TargetData/rifledata.json'
-            console.log(data)
+    fetch("./TargetData/rifledata.json") 
+        .then((res) => { 
+        return res.json(); 
+    }) 
+    .then((data) => 
+            console.log(data);
             var ul = document.createElement("ul");
             document.body.appendChild(ul);
             for (var i = 0; i <= data.length; i++)
@@ -39,11 +33,40 @@ $(document).ready (function (){
                 a.appendChild(image);
                 li.appendChild(a);
                 ul.appendChild(li);
-            // call a function on complete 
             }
-        }
-    });
-});
+    )
+); 
+//    $.ajax({
+ //       url: "./TargetData/products.txt",
+  //      async: false,
+  //      success: function (csvd) {
+//            var items = $.csv.toObjects(csvd);
+ //           var jsonobject = JSON.stringify(items);
+  //          alert(jsonobject);
+ //       },
+  //      dataType: "text",
+   //     complete: function () {
+    //        var ul = document.createElement("ul");
+     //       document.body.appendChild(ul);
+      //      for (var i = 0; i <= data.length; i++)
+       //     {
+        //        var li = document.createElement("li");  
+         //       li.text = data[i]["Product Name"];
+    
+  //              var a = document.createElement("a");
+   //             a.innerHTML = "Subfile " + data[i]["Price"];
+    
+   //             var image = document.createElement("img");
+    //            image.src = data[i]["Image"];
+    
+      //          a.appendChild(image);
+       //         li.appendChild(a);
+        //        ul.appendChild(li);
+            // call a function on complete 
+  //          }
+  //      }
+  //  });
+//});
 </script>
 </head>
 <body>
