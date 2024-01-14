@@ -27,6 +27,30 @@ body, html {
   padding: 16px;
 }
 </style>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="./TargetData/handgundata.json"></script>
+<script>
+$(document).ready (function (){
+    console.log(data);
+    var ul = document.createElement("ul");
+    document.body.appendChild(ul);
+    for (var i = 0; i <= data.length; i++)
+    {
+        var li = document.createElement("li");  
+//        li.text = data[i]["Product Name"];
+
+        var a = document.createElement("a");
+        a.innerHTML = data[i]["Product Name"] + " " + data[i]["Price"];
+
+        var image = document.createElement("img");
+        image.src = data[i]["Image"];
+
+        a.appendChild(image);
+        li.appendChild(a);
+        ul.appendChild(li);
+    }
+});
+</script>
 </head>
 <body>
 <!-- Navbar -->
