@@ -34,8 +34,8 @@ $(document).ready (function (){
                 var a = document.createElement("a");
                 a.innerHTML = "Subfile " + data[i]["Price"];
     
-                var i = document.createElement("img");
-                i.src = data[i]["Image"];
+                var image = document.createElement("img");
+                image.src = data[i]["Image"];
     
                 a.appendChild(i);
                 li.appendChild(a);
