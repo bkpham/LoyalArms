@@ -12,6 +12,7 @@
 //                                             .innerHTML=tbl(this.responseText); }
 $(document).ready (function (){
     $.get( "./TargetData/products.txt", function(productdata) {
+        let dog = "meow"
         console.log(productdata);
         data = $.csv.toObjects(productdata);
         console.log(data);
