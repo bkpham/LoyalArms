@@ -15,12 +15,13 @@ $(document).ready (function (){
         url: "./TargetData/products.txt",
         async: false,
         success: function (csvd) {
-            var items = $.csv.toObjects(csvd);
-            var jsonobject = JSON.stringify(items);
-            alert(jsonobject);
+//            var items = $.csv.toObjects(csvd);
+ //           var jsonobject = JSON.stringify(items);
+  //          alert(jsonobject);
         },
         dataType: "text",
         complete: function () {
+            var data = [{"Product Name": "hi","Price": 23.1, "Image":"https://d3gxe0jmvtuxbc.cloudfront.net/images/Product/medium/110346.jpg}"
             var ul = document.createElement("ul");
             document.body.appendChild(ul);
             for (var i = 0; i <= data.length; i++)
