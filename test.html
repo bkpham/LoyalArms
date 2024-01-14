@@ -5,11 +5,6 @@
 <title></title>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="./TargetData/rifledata>
-//window.onload=function(){ with (new XMLHttpRequest()) {
-//  onreadystatechange=cb; open('GET','./TargetData/products.csv',true); responseType='text';send();
-//}}
-//function cb(){if(this.readyState===4)document.getElementById('main')
-//                                             .innerHTML=tbl(this.responseText); }
 $(document).ready (function (){
     console.log(data);
     var ul = document.createElement("ul");
@@ -30,45 +25,6 @@ $(document).ready (function (){
         ul.appendChild(li);
     }
 });
-
-
-//    fetch("./TargetData/rifledata.json") 
- //       .then((res) => { 
- //       return res.json(); 
- //   }) 
- //   .then((data) => 
-
-//    $.ajax({
- //       url: "./TargetData/products.txt",
-  //      async: false,
-  //      success: function (csvd) {
-//            var items = $.csv.toObjects(csvd);
- //           var jsonobject = JSON.stringify(items);
-  //          alert(jsonobject);
- //       },
-  //      dataType: "text",
-   //     complete: function () {
-    //        var ul = document.createElement("ul");
-     //       document.body.appendChild(ul);
-      //      for (var i = 0; i <= data.length; i++)
-       //     {
-        //        var li = document.createElement("li");  
-         //       li.text = data[i]["Product Name"];
-    
-  //              var a = document.createElement("a");
-   //             a.innerHTML = "Subfile " + data[i]["Price"];
-    
-   //             var image = document.createElement("img");
-    //            image.src = data[i]["Image"];
-    
-      //          a.appendChild(image);
-       //         li.appendChild(a);
-        //        ul.appendChild(li);
-            // call a function on complete 
-  //          }
-  //      }
-  //  });
-//});
 </script>
 </head>
 <body>
