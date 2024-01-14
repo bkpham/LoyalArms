@@ -14,8 +14,8 @@ function tbl(csv){ // do whatever is necessary to create your table here ...
  $.get( "products.csv", function( CSVdata) {
     data = $.csv.toObjects(CSVdata);
     console.log(data)
- // var data = $.csv.toObjects(csv);
- var ul = document.createElement("ul");
+ }
+var ul = document.createElement("ul");
 document.body.appendChild(ul);
 for (var i = 0; i <= data.length; i++)
 {
@@ -32,11 +32,7 @@ for (var i = 0; i <= data.length; i++)
     li.appendChild(a);
     ul.appendChild(li);
 }
- return csv.split('\n')
-           .map(function(tr,i){return '<tr><td>'
-                                     +tr.replace(/\t/g,'</td><td>')
-                                     +'</td></tr>';})
-           .join('\n'); }
+}
 </script>
 </head>
 <body>
